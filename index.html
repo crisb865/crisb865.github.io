@@ -16,27 +16,29 @@
   --light:#5a5450;
   --rose:#c084fc;
   --teal:#2dd4bf;
+  --amber:#fbbf24;
 }
 body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-weight:300}
 .wrap{max-width:680px;margin:0 auto;padding:0 1.5rem}
-
+ 
 header{padding:3rem 0 2.5rem;border-bottom:1px solid var(--border)}
 .label{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--light);margin-bottom:1rem}
 .site-title{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;line-height:1.1;margin-bottom:.5rem;color:var(--text)}
 .author-name{font-family:'Playfair Display',serif;font-style:italic;font-size:1.1rem;color:var(--mid);margin-bottom:1.5rem}
 .pills{display:flex;gap:6px;flex-wrap:wrap}
 .pill{font-size:11px;background:#1e1e1e;border:1px solid var(--border);color:var(--mid);padding:3px 10px;border-radius:20px;letter-spacing:.3px}
-
+ 
 section{padding:2rem 0}
 .sec-title{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--light);margin-bottom:1.5rem;display:flex;align-items:center;gap:12px}
 .sec-title::after{content:'';flex:1;height:1px;background:var(--border)}
-
+ 
 .proj{display:flex;gap:1.2rem;padding:1.5rem;background:var(--card);border:1px solid var(--border);border-radius:12px;margin-bottom:1rem;transition:border-color .2s,transform .2s;align-items:flex-start}
 .proj:hover{transform:translateY(-2px);border-color:#444}
 .proj-num{font-size:11px;color:var(--light);letter-spacing:1px;flex-shrink:0;width:32px;padding-top:2px}
 .proj-body{flex:1}
 .proj-tech{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--rose);margin-bottom:.4rem}
 .proj-tech.t2{color:var(--teal)}
+.proj-tech.t3{color:var(--amber)}
 .proj-title{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;margin-bottom:.5rem;color:var(--text)}
 .proj-desc{font-size:13px;color:var(--mid);line-height:1.7;margin-bottom:1rem}
 .proj-tags{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:1rem}
@@ -44,13 +46,13 @@ section{padding:2rem 0}
 .proj-link{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--text);text-decoration:none;border-bottom:1px solid #444;padding-bottom:1px;transition:color .2s,border-color .2s}
 .proj-link:hover{color:var(--rose);border-color:var(--rose)}
 .proj-link::after{content:'↗';font-size:11px}
-
+ 
 .about-cols{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 @media(max-width:480px){.about-cols{grid-template-columns:1fr}}
 .about-box{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.2rem}
 .about-box h3{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--rose);margin-bottom:.6rem}
 .about-box p{font-size:13px;color:var(--mid);line-height:1.7}
-
+ 
 footer{border-top:1px solid var(--border);padding:1.5rem 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
 .footer-left{font-size:12px;color:var(--light)}
 .footer-right{font-family:'Playfair Display',serif;font-style:italic;font-size:13px;color:var(--mid)}
@@ -58,7 +60,7 @@ footer{border-top:1px solid var(--border);padding:1.5rem 0;display:flex;justify-
 </head>
 <body>
 <div class="wrap">
-
+ 
 <header>
   <p class="label">portafolio de proyectos</p>
   <h1 class="site-title">Proyectos Web</h1>
@@ -72,10 +74,10 @@ footer{border-top:1px solid var(--border);padding:1.5rem 0;display:flex;justify-
     <span class="pill">HTML · CSS</span>
   </div>
 </header>
-
+ 
 <section>
   <p class="sec-title">proyectos</p>
-
+ 
   <div class="proj">
     <span class="proj-num">01</span>
     <div class="proj-body">
@@ -91,7 +93,7 @@ footer{border-top:1px solid var(--border);padding:1.5rem 0;display:flex;justify-
       <a href="http://controlequipos.gt.tc/logout.php" class="proj-link" target="_blank">Ver proyecto en vivo</a>
     </div>
   </div>
-
+ 
   <div class="proj">
     <span class="proj-num">02</span>
     <div class="proj-body">
@@ -107,8 +109,25 @@ footer{border-top:1px solid var(--border);padding:1.5rem 0;display:flex;justify-
       <a href="https://sistema-vuelos-java.onrender.com/" class="proj-link" target="_blank">Ver proyecto en vivo</a>
     </div>
   </div>
+ 
+  <div class="proj">
+    <span class="proj-num">03</span>
+    <div class="proj-body">
+      <p class="proj-tech t3">PHP · MySQL</p>
+      <h2 class="proj-title">Tienda de Juguetes</h2>
+      <p class="proj-desc">Sistema web desarrollado en PHP con gestión de usuarios mediante login. Plataforma para administrar y mostrar productos de una tienda de juguetes con base de datos MySQL.</p>
+      <div class="proj-tags">
+        <span class="tag">PHP</span>
+        <span class="tag">MySQL</span>
+        <span class="tag">HTML/CSS</span>
+        <span class="tag">Login</span>
+      </div>
+      <a href="http://juguetes.gt.tc/login.php" class="proj-link" target="_blank">Ver proyecto en vivo</a>
+    </div>
+  </div>
+ 
 </section>
-
+ 
 <section>
   <p class="sec-title">sobre mí</p>
   <div class="about-cols">
@@ -122,12 +141,12 @@ footer{border-top:1px solid var(--border);padding:1.5rem 0;display:flex;justify-
     </div>
   </div>
 </section>
-
+ 
 <footer>
   <span class="footer-left">Portafolio de proyectos</span>
   <span class="footer-right">Ingrid Cristina Baños Villalobos</span>
 </footer>
-
+ 
 </div>
 </body>
 </html>
